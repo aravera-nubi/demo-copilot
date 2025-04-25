@@ -27,7 +27,7 @@ jobs:
 
 # Crea un step para subir un artifact con nombre python-app # Con (ctrl + i) + /edit lo toma mejor
     - name: Upload artifact 
-      uses: actions/upload-artifact@v3      
+      uses: actions/upload-artifact@v4      
       with:
         name: python-app
         path: |
