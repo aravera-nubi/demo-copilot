@@ -42,14 +42,14 @@ jobs:
       uses: actions/checkout@v3
 # Crea un step para descragar el artifact con nombre python-app en el root del workspace
     - name: Download artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: python-app
 
     - name: Deploy to Azure Web App
       # This action deploys the application to an Azure Web App.
       # Documentation: https://github.com/Azure/webapps-deploy
-      uses: azure/webapps-deploy@v4
+      uses: azure/webapps-deploy@v2
       with:
         app-name: demo-copilot-cicd
         slot-name: production
