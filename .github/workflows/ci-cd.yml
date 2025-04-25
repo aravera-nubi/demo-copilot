@@ -47,6 +47,7 @@ jobs:
       # Documentation: https://github.com/Azure/webapps-deploy
       uses: azure/webapps-deploy@v2
       with:
-        app-name: <YOUR_AZURE_WEB_APP_NAME>
+        app-name: demo-copilot-cicd
         slot-name: production
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+
