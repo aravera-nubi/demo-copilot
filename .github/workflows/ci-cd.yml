@@ -49,7 +49,7 @@ jobs:
     - name: Deploy to Azure Web App
       # This action deploys the application to an Azure Web App.
       # Documentation: https://github.com/Azure/webapps-deploy
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v4
       with:
         app-name: demo-copilot-cicd
         slot-name: production
