@@ -26,13 +26,13 @@ jobs:
         pip install -r requirements.txt
 
 # Crea un step para subir un artifact con nombre python-app # Con (ctrl + i) + /edit lo toma mejor
-    - name: Upload artifact
+    - name: Upload artifact 
       uses: actions/upload-artifact@v3      
       with:
-      name: python-app
-      path: |
-        .
-        !venv/
+        name: python-app
+        path: |
+          .
+          !venv/
 
   deploy:
     needs: build
