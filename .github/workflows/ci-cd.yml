@@ -37,10 +37,14 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+# Crea un step para descragar el artifact con nombre python-app en el root del workspace
+    - name: Download artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: python-app
 
     - name: Deploy to Azure Web App
       # This action deploys the application to an Azure Web App.
